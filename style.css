@@ -41,7 +41,7 @@ body{
 .desc-in{
     font-size: 27px;
     margin: 5px;
-    color: #e61414; 
+    color: #1495ff;
     font-weight: 600;
 }
 #poznaj{
@@ -57,9 +57,10 @@ body{
     transition: all .2s linear;
 }
 #poznaj:hover{
-    background-color: #EEEEEE;
-    color: #0C0C0C;
+    background-color: #1495ff;
+    color: #FFF7FC;
     transition: all .2s linear;
+    border: 2px solid #1495ff;
 }
 /* #poznaj::after{
     content: 'Poznaj nas bliżej';
@@ -89,36 +90,83 @@ header{
     color: #EEEEEE;
 }
 .kierunki-box{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
 .kierunki-box>div{
     text-align: center;
-    width: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 5px 20px;
-    border-bottom: 3px solid #b3ff01;
-    padding: 5px 20px;
+    /* border-bottom: 3px solid #b3ff01; */
+    padding: 90px 20px;
 }
 .kierunki-box>div>i{
     font-size: 120px;
     color: #b3ff01;
 }
-.kierunki-box>div>h4{
-    font-size: 35px;
-    color: #8bd64e;
+.kierunki-box>div>div>h4>span{
+    color: #b3ff01;
+}
+.kierunki-box>div>div>h4{
+    font-size: 65px;
+    color: #EEEEEE;
     margin: 10px;
 }
-.kierunki-box>div>p{
+.kierunki-box>div>div>p{
+    font-size: 25px;
+    margin: 5px 10px;
+}
+.kierunki-box>div>div>p>span{
+    color: #1495ff;
+}
+.kierunki-box>div>div{
+    width: 40%;
+    text-align: left;
+    margin-left: 50px;
     font-size: 22px;
     color: #EEEEEE;
 }
-.kierunki-box>div:hover{
+.kierunki-box>div>div>ul>li{
+    list-style-type: none;
+    margin: 15px 10px;
+    position: relative;
+}
+
+.kier-p{
+    font-size: 30px!important;
+    color: #1495ff;
+    margin: 30px 0px;
+}
+.kierunki-box>div>div>ul>li>span{
+    width: 35px;
+    height: 35px;
+    background-color: #8bd64e;
+    filter: drop-shadow(2px 2px 0px #000000);
+    position: absolute;
+    top: 0;
+    left: -55px;
+}
+.pol>li>span{
+    width: 35px;
+    height: 35px;
+    background-color: #1495ff!important;
+    filter: drop-shadow(2px 2px 0px #000000);
+    position: absolute;
+    top: 0;
+    left: -55px;
+}
+/* .kierunki-box>div:hover{
     background-color: rgb(139, 214, 78, 0.1);
     cursor: pointer;
+} */
+.kier-p2{
+    font-size: 30px!important;
+    color: #b3ff01;
+    margin: 30px 0px;
 }
+
 .kierunki-now{
     margin-top: 70px;
     padding: 100px 0px;
@@ -147,7 +195,7 @@ header{
     filter: drop-shadow(5px 5px 0px #000000);
 }
 .kierunki-now>div>h3>span{
-    color: #e61414;
+    color: #1495ff;
     font-size: 55px;
 }
 .kierunki-now>ul{
@@ -215,9 +263,53 @@ header{
 }
 .mediaSoc{
     color: #b3ff01;
+    filter: drop-shadow(3px 3px 0px #000000);
+    border-bottom: 2px solid #b3ff01;
 }
 .social{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+footer{
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+}
+footer>div{
+    margin: 20px;
+}
+footer>div>h3{
+    font-size: 25px;
+    color: #1495ff;
+}
+footer>div>div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #EEEEEE;
+}
+footer>div>div>i{
+    color: #b3ff01;
+    font-size: 22px;
+}
+footer>div>div>p{
+    font-size: 22px;
+    margin: 15px;
+}
+footer>div>p{
+    color: #EEEEEE;
+    font-size: 22px;
+    margin: 15px 0px;
+}
+footer>div>div>p:hover{
+    cursor: pointer;
+    color: #8bd64e;
+}
+footer>div>p:hover{
+    cursor: pointer;
+    color: #8bd64e;
 }

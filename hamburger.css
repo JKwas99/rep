@@ -9,10 +9,10 @@ header>.menu{
     background: black;
 }
 ::-webkit-scrollbar-thumb {
-    background: #e61414; 
+    background: #b3ff01;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #e61414; 
+    background: #b3ff01; 
 }
 
 .hamburger{
