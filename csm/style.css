@@ -425,6 +425,7 @@ footer>div>p:hover{
     position: relative;
     flex-wrap: wrap;
     text-align: right;
+    margin-bottom: 50px;
 }
 .moveBox::before{
     content: "WSPÓŁPRACE";
@@ -442,7 +443,7 @@ footer>div>p:hover{
     padding: 10px;
     cursor: pointer;
     text-align: right;
-    font-size: calc(11px + 1vw); /* Rozmiar czcionki zależny od szerokości widoku */
+    font-size: calc(10px + 1vw); /* Rozmiar czcionki zależny od szerokości widoku */
 }
 .moveBox>li:hover{
     background-color: #b3b3b32a!important;
