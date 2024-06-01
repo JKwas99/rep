@@ -39,3 +39,30 @@ let element = document.getElementById("poznaj")
 element.addEventListener('click', ()=>{
     document.getElementById('kierunki').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.content-child p');
+    let currentProject = 0;
+
+    function updateProjects() {
+        projects.forEach((project, index) => {
+            project.classList.remove('active');
+            if (index === currentProject) {
+                project.classList.add('active');
+            }
+        });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        currentProject = (currentProject === 0) ? projects.length - 1 : currentProject - 1;
+        updateProjects();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        currentProject = (currentProject === projects.length - 1) ? 0 : currentProject + 1;
+        updateProjects();
+    });
+
+    // Initialize the first project
+    updateProjects();
+});
