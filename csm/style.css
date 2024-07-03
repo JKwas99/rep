@@ -427,6 +427,35 @@ footer>div>p:hover{
     text-align: right;
     margin-bottom: 50px;
 }
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Odstęp między zdjęciami */
+    max-width: 100vw; /* Maksymalna szerokość kolażu */
+}
+
+.photo-container {
+    width: calc(20% - 10px); /* Szerokość kontenera, uwzględniając odstępy (3 zdjęcia w rzędzie) */
+    height: auto; /* Ustalona wysokość dla wszystkich zdjęć */
+    overflow: hidden; /* Ukrycie części zdjęcia po powiększeniu */
+    position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%; /* Dopasowanie do kontenera */
+    object-fit: cover; /* Przycinanie obrazu, aby wypełnić kontener */
+    transition: transform 0.3s ease-in-out; /* Dodanie przejścia */
+}
+
+.photo-container img:hover {
+    transform: scale(1.1); /* Powiększenie zdjęcia */
+}
+.akc{
+    font-size:120px;
+    color: #b3ff01;
+    margin: 100px;
+}
 .moveBox::before{
     content: "WSPÓŁPRACE";
     position: absolute;
@@ -546,4 +575,85 @@ footer>div>p:hover{
 }
 .content-child p.active {
     display: block;
+}
+.moreee{
+    margin: 50px 10px;
+    padding: 10px 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 25px;
+    color: #0C0C0C;
+    background-color: #1495ff;
+    border: 4px solid #1495ff;
+    transition: transform .3s linear;
+}
+.moreee:hover{
+    opacity: 70%;
+}
+.akc{
+    position: relative;
+}
+.akc::before{
+    content: 'MUNDURÓWKA W AKCJI';
+    color: #f7f7f7;
+    opacity: 20%;
+    top: 10%;
+    position: absolute;
+    font-size: 120px
+}
+.modal {
+    position: absolute;
+    display: none; /* Ukryj modal domyślnie */
+    position: fixed; /* Ustaw modal nad inną zawartością */
+    z-index: 20; /* Ustaw z-index (poziom) modala */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Pełna szerokość */
+    height: 100%; /* Pełna wysokość */
+    overflow: auto; /* Włącz przewijanie, jeśli jest to konieczne */
+    background-color: rgba(0,0,0,0.9); /* Czarny z przezroczystością */
+}
+
+/* Modal (zawartość) */
+.modal-content {
+    margin: 10% auto; /* 10% od góry i wyśrodkowane */
+    padding: 20px;
+    width: 80%; /* Szerokość modala */
+}
+
+/* Nagłówek modala */
+.modal-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+/* Przycisk zamykający modal */
+.x {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: #b3ff01;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+.x::after{
+    content: '';
+    width: 40px;
+    height: 2px;
+    transform: rotate(-90deg);
+    background-color: #b3ff01;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
 }

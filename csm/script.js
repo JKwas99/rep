@@ -66,3 +66,56 @@ element.addEventListener('click', ()=>{
     // Initialize the first project
     updateProjects();
 });
+
+// Pobierz modale
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+
+// Pobierz przyciski, które otwierają modale
+var btn1 = document.getElementById("openModal1");
+var btn2 = document.getElementById("openModal2");
+var btn3 = document.getElementById("openModal3");
+
+// Pobierz elementy <span>, które zamykają modale
+var span1 = modal1.getElementsByClassName("close")[0];
+var span2 = modal2.getElementsByClassName("close")[0];
+var span3 = modal3.getElementsByClassName("close")[0];
+
+// Funkcje obsługujące otwieranie i zamykanie modali
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+
+btn3.onclick = function() {
+    modal3.style.display = "block";
+}
+
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+
+// Funkcja zamykająca modal po kliknięciu gdziekolwiek poza nim
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
