@@ -374,8 +374,14 @@ header{
 }
 .wspol{
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 20px 10% 50px 10%;
+    background: repeating-linear-gradient(
+        45deg,
+        #0C0C0C,
+        #0C0C0C 50px,
+        #1495ff6c 50px,
+        #1495ff6c 51px
+      );
 }
 .wspol>h3{
     text-align: right;
@@ -576,4 +582,52 @@ footer>div>p:hover{
 }
 .tiktokKadra{
     padding: 20px 20% 20px 0%;
+}
+.content-box {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box>button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.content-box>button>i {
+    font-size: 80px;
+    color: #b3ff01;
+}
+
+.content-box>button>i:hover {
+    color: #1495ff;
+}
+
+.content-child {
+    display: inline-block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+}
+
+.content-child>img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.content-child>img.active {
+    display: block;
 }

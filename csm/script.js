@@ -49,23 +49,23 @@ window.onclick = function(event) {
         modal3.style.display = "none";
     }
 }
-function losoweStyle() {
-    const elementy = document.querySelectorAll('.moveLi');
-    kolory = ["#EEEEEE", "#b3ff01", "#2196F3"];
+// function losoweStyle() {
+//     const elementy = document.querySelectorAll('.moveLi');
+//     kolory = ["#EEEEEE", "#b3ff01", "#2196F3"];
     
-    elementy.forEach(element => {
-        const kolorTekstu = `${kolory[Math.floor(Math.random() * 3)]}`;
-        element.style.color = kolorTekstu;
-        element.style.background = "transparent"
-    });
+//     elementy.forEach(element => {
+//         const kolorTekstu = `${kolory[Math.floor(Math.random() * 3)]}`;
+//         element.style.color = kolorTekstu;
+//         element.style.background = "transparent"
+//     });
 
-    for(let i=0;i<5;i++){
-        elementy[Math.floor(Math.random() * elementy.length)].style.background = '#b3b3b32a'
-    }
-}
+//     for(let i=0;i<5;i++){
+//         elementy[Math.floor(Math.random() * elementy.length)].style.background = '#b3b3b32a'
+//     }
+// }
 
-losoweStyle();
-setInterval(losoweStyle, 3000); // Wywołanie funkcji co 3 sekundy
+// losoweStyle();
+// setInterval(losoweStyle, 3000); // Wywołanie funkcji co 3 sekundy
 
 let element = document.getElementById("poznaj")
 
@@ -82,3 +82,36 @@ tok.addEventListener("mouseover", ()=>{
 tok.addEventListener("mouseleave", ()=>{
     tik.src = "images/tiktok.svg"
 })
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.content-child img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        images[currentIndex].classList.add('active');
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        images[currentIndex].classList.add('active');
+    });
+
+    function autoNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        images[currentIndex].classList.add('active');
+    }
+
+    setInterval(autoNextImage, 3000); // Change image every 3 seconds
+
+    // Initialize first image as active
+    showImage(currentIndex);
+});
