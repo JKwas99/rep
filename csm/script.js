@@ -115,3 +115,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize first image as active
     showImage(currentIndex);
 });
+// Lista obrazków tła do przełączania
+// Lista obrazków tła do przełączania
+// var images = [
+//     'images/download.png',
+//     'images/download2.png'
+//   ];
+  
+//   var currentIndex = 0; // Indeks obecnego obrazka
+  
+//   // Funkcja do zmiany tła co 5 sekund
+//   function zmienTlo() {
+//     var header = document.getElementById('header');
+//     currentIndex = (currentIndex + 1) % images.length; // Przejdź do następnego obrazka
+//     header.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+//   }
+  
+//   // Uruchom funkcję na początku
+//   window.addEventListener('load', function() {
+//     zmienTlo(); // Uruchom na początku
+//     setInterval(zmienTlo, 8000); // Następnie uruchom co 5 sekund
+//   });
+  
+// Tekst do animacji
+// Teksty do animacji
+// var tekst1 = "NOWOŚĆ!";
+// var tekst2 = " SPECJALIZACJA DRONY";
+
+// // Pobierz elementy tekstowe
+// var span1 = document.getElementById('animowanyTekst1');
+// var span2 = document.getElementById('animowanyTekst2');
+
+// // Funkcja do animacji pisania tekstu
+// function animacjaPisania(element, tekst) {
+//     span1.textContent = ''
+//     span2.textContent = ''
+//   var originalText = element.textContent;
+//   var i = 0;
+//   var interval = setInterval(function() {
+//     element.textContent = originalText + tekst.substring(0, i);
+//     i++;
+//     if (i > tekst.length) {
+//       clearInterval(interval);
+//       setTimeout(function() {
+//         animacjaPisania(element, tekst); // Powtórz animację po zakończeniu
+//       }, 1000); // Opóźnienie przed rozpoczęciem ponownej animacji (1 sekunda)
+//     }
+//   }, 100); // Interwał czasowy (100ms) - można dostosować prędkość animacji tutaj
+// }
+
+// // Uruchom animację na załadowaniu strony
+// window.addEventListener('load', function() {
+//   animacjaPisania(span1, tekst1);
+//   setTimeout(function() {
+//     animacjaPisania(span2, tekst2);
+//   }, 1500); // Opóźnienie animacji drugiego tekstu (1.5 sekundy)
+// });

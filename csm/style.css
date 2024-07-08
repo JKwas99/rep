@@ -42,14 +42,14 @@ body{
     top: 0;
     position: absolute;
     height: 100vh;
-    background-color: rgb(12, 12, 12, 0.7);
+    background-color: rgb(12, 12, 12, 0.6);
     color: #EEEEEE;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 .desc-text{
-    padding: 40vh 0% 0 0;
+    padding: 25vh 0% 0 0;
     font-size: 70px;
     font-weight: 750;
 }
@@ -60,30 +60,34 @@ body{
     color: #b3ff01;
     font-weight: 600;
 }
+#specjal{
+    font-size: 30px!important;
+}
 #poznaj{
-    margin: 30px;
+    margin: 300px 30px 30px 30px;
     display: inline-block;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 35px;
     padding: 8px 25px;
     color: #EEEEEE;
-    width: 200px;
     border: 2px solid #1495ff;
     position: relative;
     transition: all .2s linear;
+    background-color: #0000009d;
 }
 #poznaj:hover{
-    background-color: #1495ff;
+    background-color: #18171780;
     color: #FFF7FC;
     transition: all .2s linear;
-    border: 2px solid #1495ff;
+    border: 2px solid #003d6e;
 }
 header{
    width: 100vw;
+   background-image: url(images/download2.png); 
    height: 100vh;
    background-repeat: no-repeat;
-   background-image: url(images/download.png); 
    background-size: cover;
+   transition: background-image 1s ease-in-out;
 }
 .menu{
     position: absolute;
