@@ -631,3 +631,19 @@ footer>div>p:hover{
 .content-child>img.active {
     display: block;
 }
+.modal-content ul li{
+    font-size: 20px;
+    margin: 15px;
+    list-style-type: none;
+    position: relative;
+    color: #eeeeee;
+}
+.modal-content ul li span{
+    width: 35px;
+    height: 35px;
+    background-color: #b3ff01!important;
+    filter: drop-shadow(2px 2px 0px #000000);
+    position: absolute;
+    top: 0;
+    left: -55px;
+}
