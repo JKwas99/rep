@@ -54,7 +54,7 @@ body{
     font-weight: 750;
 }
 .desc-in{
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 5px;
     margin: 2px;
     color: #b3ff01;
@@ -64,14 +64,17 @@ body{
     font-size: 30px!important;
 }
 #poznaj{
-    margin: 300px 30px 30px 30px;
+    position:absolute;
+    bottom: 70px;
+    margin: 30px 30px 30px 30px;
     display: inline-block;
     text-decoration: none;
     font-size: 35px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 8px 25px;
     color: #EEEEEE;
     border: 2px solid #1495ff;
-    position: relative;
     transition: all .2s linear;
     background-color: #0000009d;
 }
@@ -101,9 +104,12 @@ header{
 }
 .menu>ul>a{
     color: #ececec;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     margin: 10px;
+}
+.menu>ul>a:hover{
+    color: #8bd64e;
 }
 .hamburger{
     display: none;
@@ -154,6 +160,7 @@ header{
     color: #b3ff01!important;
     border-bottom: 2px solid #b3ff01;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 .kierunki{
     padding: 20px 0px 50px 0px;
