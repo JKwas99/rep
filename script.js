@@ -66,6 +66,25 @@ window.onclick = function(event) {
 
 // losoweStyle();
 // setInterval(losoweStyle, 3000); // Wywołanie funkcji co 3 sekundy
+// Pobieranie przycisku
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Funkcja pojawienia się przycisku po przewinięciu 500px
+window.onscroll = function() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// Funkcja powrotu na górę po kliknięciu przycisku
+scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 let element = document.getElementById("poznaj")
 

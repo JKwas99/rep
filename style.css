@@ -5,7 +5,102 @@ font-family: "Roboto", sans-serif;
     color: #EEEEEE;
     color: #b3ff01;
 */
+.icon-angle-double-up{
+    font-size: 50px;
+    position: fixed;
+    right: 30px;
+    text-align: center;
+    color: #0e0e0e;
+    bottom: 30px;
+    display: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border: 1px solid #0e0e0e;
+    z-index: 100;
+    background-color: #b3ff01;
+}
+.icon-angle-double-up:hover{
+    background-color: #b3ff01be;
+}
 @media (min-width:1281px){
+    .infoAK{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoAK>div{
+        width: 300px;
+        height: 300px;
+        margin: 30px;
+    }
+    .infoAK>div::before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: rgb(15,15,15);
+        border-radius: 50%;
+        z-index: 12;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .infoAK>div{
+        color: rgb(15,15,15);
+        position: relative;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            #92cf02,
+            #92cf02 30px,
+            #b3ff01 30px,
+            #b3ff01 60px
+          );
+        border: 2px solid #030303a8;
+        filter: drop-shadow(10px 10px 0px #1495ffbe);
+    }
+    .infoAK>div>h3{
+        font-size: 3em;
+        margin: 25px 0 0 0;
+    }
+    .infoAK>div>p{
+        font-size: 25px;
+        margin: 10px;
+        font-weight: bold;
+    }
+    .infoAK>div>a:hover{
+        color: #1495ff;
+    }
+    .infoAK>div>a{
+        font-size: 25px;
+        text-decoration: none;
+        color: #0d0e0d;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ak>h4{
+        margin-top: 10px;
+        font-size: 4em;
+        margin-bottom: 10px;
+        color: #b3ff01;
+    }
+    .ak{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        /* background-image: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 30px,
+            rgb(26, 25, 25) 30px,
+            rgb(26,26,26)60px
+          ); */
+    }
+    
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -677,6 +772,84 @@ footer>div>p:hover{
     ::-webkit-scrollbar-thumb:hover {
         background: #b3ff01;
     }
+    .infoAK{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoAK>div{
+        width: 300px;
+        height: 300px;
+        margin: 30px;
+    }
+    .infoAK>div::before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: rgb(15,15,15);
+        border-radius: 50%;
+        z-index: 12;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .infoAK>div{
+        color: rgb(15,15,15);
+        position: relative;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            #92cf02,
+            #92cf02 30px,
+            #b3ff01 30px,
+            #b3ff01 60px
+          );
+        border: 2px solid #030303a8;
+        filter: drop-shadow(10px 10px 0px #1495ffbe);
+    }
+    .infoAK>div>h3{
+        font-size: 2.5em;
+        margin: 25px 0 0 0;
+    }
+    .infoAK>div>p{
+        font-size: 20px;
+        margin: 10px;
+        font-weight: bold;
+    }
+    .infoAK>div>a:hover{
+        color: #1495ff;
+    }
+    .infoAK>div>a{
+        font-size: 20px;
+        text-decoration: none;
+        color: #0d0e0d;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ak>h4{
+        margin-top: 10px;
+        font-size: 3em;
+        margin-bottom: 10px;
+        color: #b3ff01;
+    }
+    .ak{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        /* background-image: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 30px,
+            rgb(26, 25, 25) 30px,
+            rgb(26,26,26)60px
+          ); */
+    }
+
     
     body{
         background-color: #0C0C0C;
