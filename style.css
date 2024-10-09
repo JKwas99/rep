@@ -22,7 +22,17 @@ font-family: "Roboto", sans-serif;
 .icon-angle-double-up:hover{
     background-color: #b3ff01be;
 }
+
 @media (min-width:1281px){
+    .mundurowa{
+        width: 80%;
+        text-align: center;
+        position: relative;
+        left: 0;
+    }
+    .mundurowa>video{
+        width: 50%;
+    }
     .infoAK{
         width: 100%;
         display: flex;
@@ -405,6 +415,7 @@ header{
     right: 50px;
     cursor: pointer;
 }
+
 /* Przycisk zamykający modal */
 .x {
     position: absolute;
@@ -703,43 +714,37 @@ footer>div>p:hover{
     align-items: center;
     justify-content: center;
 }
-
-.content-box>button {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.content-box>button>i {
-    font-size: 80px;
-    color: #b3ff01;
-}
-
-.content-box>button>i:hover {
-    color: #1495ff;
-}
-
 .content-child {
-    display: inline-block;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    height: 100%;
-    text-align: center;
+    width: 100%; /* Szerokość kontenera */
+    overflow: hidden; /* Ukrycie obrazów, które wychodzą poza ekran */
+    display: flex;
 }
 
-.content-child>img {
-    width: 100%;
-    height: auto;
-    display: none;
+.content-child img {
+    width: 60vw; /* Każdy obraz zajmuje całą szerokość okna */
+    flex-shrink: 0; /* Zapobiega zmniejszaniu obrazów */
+    animation: slide 30s linear infinite; /* Definicja animacji */
 }
 
-.content-child>img.active {
-    display: block;
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 .modal-content ul li{
     font-size: 20px;
@@ -1029,6 +1034,13 @@ footer>div>p:hover{
         animation-duration: 4s;
         animation-iteration-count: infinite;
     }
+    .mundurowa{
+        width: 100%;
+        text-align: center;
+        position: relative;
+        left: 0;
+    }
+
     @keyframes long {
         0%{
             width: 50px;
@@ -1446,42 +1458,49 @@ footer>div>p:hover{
     .tiktok-embed>iframe{
         height: 80vh!important;
     }
-    .content-box>button {
-        width: 100px;
-        height: 100px;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        cursor: pointer;
-    }
+
     
-    .content-box>button>i {
-        font-size: 80px;
-        color: #b3ff01;
+    .content-box {
+        margin-top: 30px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        height: 80%;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .content-box>button>i:hover {
-        color: #1495ff;
-    }
-    
     .content-child {
-        display: inline-block;
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-        height: 100%;
-        text-align: center;
+        width: 100%; /* Szerokość kontenera */
+        overflow: hidden; /* Ukrycie obrazów, które wychodzą poza ekran */
+        display: flex;
     }
     
-    .content-child>img {
-        width: 100%;
-        height: auto;
-        display: none;
+    .content-child img {
+        width: 60vw; /* Każdy obraz zajmuje całą szerokość okna */
+        flex-shrink: 0; /* Zapobiega zmniejszaniu obrazów */
+        animation: slide 30s linear infinite; /* Definicja animacji */
     }
     
-    .content-child>img.active {
-        display: block;
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(-100%);
+        }
+        40% {
+            transform: translateX(-200%);
+        }
+        60% {
+            transform: translateX(-300%);
+        }
+        80% {
+            transform: translateX(-400%);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
     .modal-content ul li{
         font-size: 20px;
@@ -1498,5 +1517,8 @@ footer>div>p:hover{
         position: absolute;
         top: 0;
         left: -55px;
+    }
+    .mundurowa>video{
+        width: 50%;
     }
 }
