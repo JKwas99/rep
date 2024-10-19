@@ -49,6 +49,43 @@ window.onclick = function(event) {
         modal3.style.display = "none";
     }
 }
+function sprawdzScroll() {
+    // Pobierz elementy
+    const wyroznienie = document.querySelector('.wyroznienie');
+    const kierunki = document.querySelector('.kierunki');
+    const filmik = document.querySelector('.filmik');
+    const ak = document.querySelector('.ak');
+    const menu = document.querySelector('.menu');
+
+    // Oblicz wysokości poszczególnych elementów
+    const wysokoscWyroznienie = wyroznienie ? wyroznienie.offsetHeight : 0;
+    const wysokoscKierunki = kierunki ? kierunki.offsetHeight : 0;
+    const wysokoscFilmik = filmik ? filmik.offsetHeight : 0;
+    const wysokoscAk = ak ? ak.offsetHeight : 0;
+    const wysokoscMenu = menu ? menu.offsetHeight : 0;
+
+    // Suma wysokości elementów
+    const sumaWysokosci = wysokoscWyroznienie + wysokoscKierunki + wysokoscFilmik + wysokoscAk + wysokoscMenu;
+
+    // Sprawdź aktualną pozycję przewinięcia
+    const dlugoscScrolla = window.scrollY;
+    let dron1 = document.getElementById('dron1');
+    let dron2 = document.getElementById('dron2');
+
+    // Porównaj pozycję scrolla z sumą wysokości
+    if (dlugoscScrolla > sumaWysokosci) {
+        dron1.style.transform = `translate(0,0)`;
+        dron2.style.transform = `translate(0,0)`;
+    } else {
+        dron1.style.transform = `translate(30%, -20%)`
+        dron2.style.transform = `translate(-30%, 20%)`
+    }
+}
+
+// Nasłuchiwanie zdarzenia scrolla
+window.addEventListener('scroll', sprawdzScroll);
+
+
 // function losoweStyle() {
 //     const elementy = document.querySelectorAll('.moveLi');
 //     kolory = ["#EEEEEE", "#b3ff01", "#2196F3"];
@@ -89,7 +126,7 @@ scrollToTopBtn.addEventListener('click', function() {
 let element = document.getElementById("poznaj")
 
 element.addEventListener('click', ()=>{
-    document.getElementById('drony').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('dron1').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 button = document.getElementsByClassName("hamburger")
@@ -109,47 +146,3 @@ tok.addEventListener("mouseover", ()=>{
 tok.addEventListener("mouseleave", ()=>{
     tik.src = "images/tiktok.svg"
 })
-
-const totalPhotos = 30;
-const photoElements = document.querySelectorAll('.photo-container img');
-
-// Tablica wszystkich zdjęć
-let availablePhotos = Array.from({length: totalPhotos}, (_, i) => i + 1);
-
-// Funkcja do mieszania tablicy
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-availablePhotos = shuffle(availablePhotos);
-
-function getRandomPhotos() {
-    let selectedPhotos = [];
-
-    while (selectedPhotos.length < 5) {
-        const randomIndex = Math.floor(Math.random() * photoElements.length);
-        if (!selectedPhotos.includes(randomIndex)) {
-            selectedPhotos.push(randomIndex);
-        }
-    }
-
-    return selectedPhotos;
-}
-
-function changeRandomPhotos() {
-    const randomPhotos = getRandomPhotos();
-
-    randomPhotos.forEach(index => {
-        if (availablePhotos.length === 0) {
-            availablePhotos = shuffle(Array.from({length: totalPhotos}, (_, i) => i + 1));
-        }
-        const nextPhotoNumber = availablePhotos.shift();
-        photoElements[index].src = `images/zdjecie${nextPhotoNumber}.jpg`;
-    });
-}
-
-setInterval(changeRandomPhotos, 3000);

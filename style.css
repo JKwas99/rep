@@ -5,6 +5,13 @@ font-family: "Roboto", sans-serif;
     color: #EEEEEE;
     color: #b3ff01;
 */
+.fade-out {
+    opacity: 0; /* Zanikanie zdjęcia */
+  }
+  
+  .fade-in {
+    opacity: 1; /* Pojawianie się zdjęcia */
+  }
 .icon-angle-double-up{
     font-size: 50px;
     position: fixed;
@@ -564,9 +571,9 @@ header{
 
 .photo-container img {
     width: 100%;
+    transition: opacity 0.5s ease;
     height: 100%; /* Dopasowanie do kontenera */
-    object-fit: cover; /* Przycinanie obrazu, aby wypełnić kontener */
-    transition: transform 0.3s ease-in-out; /* Dodanie przejścia */
+    object-fit: cover; /* Przycinanie obrazu, aby wypełnić kontener */ /* Dodanie przejścia */
 }
 
 .photo-container img:hover {
@@ -623,6 +630,59 @@ header{
 }
 #drony{
     width: 100%;
+}
+.dronyBlock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#dron1{
+    position: absolute;
+    right: 00px;
+    top: 0px;
+    transform: translate(30%, -20%);
+    transition: transform .6s linear
+}
+#dron2{
+    width: 40%;
+    transform: translate(-30%, 20%);
+    transition: transform .6s linear;
+}
+.dronyBlock ul{
+    margin: 7%;
+    width: 40%;
+}
+.dronyBlock:hover #dron1 {
+    transform: translate(0%, 0%);
+}
+  
+.dronyBlock:hover #dron2 {
+    transform: translate(0%, 0%);
+}
+.dron{
+    font-size: 70px;
+    color: #b3ff01;
+    margin: 10px;
+}
+.dronyBlock ul li{
+    
+    color: #ececec;
+    font-size: 27px;
+    list-style-type: none;
+    margin: 15px;
+    list-style-type: none;
+    position: relative;
+    color: #eeeeee;
+}
+.dronyBlock ul li span{
+    width: 35px;
+    height: 35px;
+    background-color: #1495ff!important;
+    filter: drop-shadow(2px 2px 0px #000000);
+    position: absolute;
+    top: 10px;
+    left: -55px;
 }
 footer{
     margin-top: 100px;
@@ -1365,6 +1425,58 @@ footer>div>p:hover{
     #drony{
         width: 100%;
     }
+    .dronyBlock{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    #dron1{
+        position: absolute;
+        right: 00px;
+        top: 0px;
+        transform: translate(30%, -20%);
+        transition: transform .6s linear
+    }
+    #dron2{
+        width: 40%;
+        transform: translate(-30%, 20%);
+        transition: transform .6s linear;
+    }
+    .dronyBlock ul{
+        margin: 7%;
+        width: 40%;
+    }
+    .dronyBlock:hover #dron1 {
+        transform: translate(0%, 0%);
+    }
+      
+    .dronyBlock:hover #dron2 {
+        transform: translate(0%, 0%);
+    }
+    .dron{
+        font-size: 70px;
+        color: #b3ff01;
+        margin: 10px;
+    }
+    .dronyBlock ul li{
+        
+        color: #ececec;
+        font-size: 27px;
+        list-style-type: none;
+        margin: 15px;
+        list-style-type: none;
+        position: relative;
+        color: #eeeeee;
+    }
+    .dronyBlock ul li span{
+        width: 35px;
+        height: 35px;
+        background-color: #1495ff!important;
+        filter: drop-shadow(2px 2px 0px #000000);
+        position: absolute;
+        top: 10px;
+        left: -55px;}
     footer{
         margin-top: 100px;
         width: 80%;
