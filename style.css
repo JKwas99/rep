@@ -174,7 +174,8 @@ body{
     font-weight: 600;
 }
 #specjal{
-    font-size: 30px!important;
+    font-size: 35px!important;
+    font-weight: bold;
 }
 #poznaj{
     position:absolute;
@@ -660,10 +661,13 @@ header{
 .dronyBlock:hover #dron2 {
     transform: translate(0%, 0%);
 }
-.dron{
+.letD{
     font-size: 70px;
     color: #b3ff01;
-    margin: 10px;
+}
+.dron{
+    color: white;
+    font-size: 50px;
 }
 .dronyBlock ul li{
     
@@ -778,6 +782,7 @@ footer>div>p:hover{
     width: 100%; /* Szerokość kontenera */
     overflow: hidden; /* Ukrycie obrazów, które wychodzą poza ekran */
     display: flex;
+
 }
 
 .content-child img {
@@ -788,22 +793,10 @@ footer>div>p:hover{
 
 @keyframes slide {
     0% {
-        transform: translateX(0);
-    }
-    20% {
         transform: translateX(-100%);
     }
-    40% {
-        transform: translateX(-200%);
-    }
-    60% {
-        transform: translateX(-300%);
-    }
-    80% {
-        transform: translateX(-400%);
-    }
     100% {
-        transform: translateX(0);
+        transform: translateX(-420%); /* Zwiększamy o jedną pozycję */
     }
 }
 .modal-content ul li{
@@ -958,7 +951,8 @@ footer>div>p:hover{
         font-weight: 600;
     }
     #specjal{
-        font-size: 18px!important;
+        font-size: 15px!important;
+        font-weight: bold;
     }
     #poznaj{
         position:absolute;

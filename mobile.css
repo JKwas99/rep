@@ -156,6 +156,7 @@
     }
     #specjal{
         font-size: 18px!important;
+        font-weight: bold;
     }
     #poznaj{
         position:absolute;
@@ -644,10 +645,13 @@
     .dronyBlock:hover #dron2 {
         transform: translate(0%, 0%);
     }
-    .dron{
-        font-size: 50px;
+    .letD{
+        font-size: 70px;
         color: #b3ff01;
-        margin: 10px;
+    }
+    .dron{
+        color: white;
+        font-size: 50px;
     }
     .dronyBlock ul li{
         
