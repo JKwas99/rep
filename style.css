@@ -499,15 +499,9 @@ header{
     color: #EEEEEE;
 }
 .wspol{
+    background-color: #101010;
     width: 80%;
     padding: 20px 10% 50px 10%;
-    background: repeating-linear-gradient(
-        45deg,
-        #0C0C0C,
-        #0C0C0C 50px,
-        #1495ff6c 50px,
-        #1495ff6c 51px
-      );
 }
 .wspol>h3{
     text-align: right;
@@ -1287,14 +1281,8 @@ footer>div>p:hover{
     }
     .wspol{
         width: 80%;
+        background-color: #101010;
         padding: 20px 10% 50px 10%;
-        background: repeating-linear-gradient(
-            45deg,
-            #0C0C0C,
-            #0C0C0C 50px,
-            #1495ff6c 50px,
-            #1495ff6c 51px
-          );
     }
     .wspol>h3{
         text-align: right;
