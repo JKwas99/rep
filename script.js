@@ -82,6 +82,29 @@ function sprawdzScroll() {
     }
 }
 
+let doks = document.getElementsByClassName("doks")
+let moveLI = document.getElementsByClassName("moveLI")
+let newMen = document.getElementsByClassName("submenu-list")
+
+let pin = 0
+
+doks[0].addEventListener('click', ()=>{
+    if(pin == 0){
+        moveLI[0].style.transform = `translateY(180px)`;
+        moveLI[1].style.transform = `translateY(180px)`;
+        moveLI[2].style.transform = `translateY(180px)`;
+        pin = 1
+    }
+    else{
+        moveLI[0].style.transform = `translateY(0px)`;
+        moveLI[1].style.transform = `translateY(0px)`;
+        moveLI[2].style.transform = `translateY(0px)`;
+        pin = 0
+    }
+    newMen[0].classList.toggle("menuActiveIs")
+
+})
+
 // Nasłuchiwanie zdarzenia scrolla
 window.addEventListener('scroll', sprawdzScroll);
 

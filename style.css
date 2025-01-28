@@ -30,6 +30,8 @@ font-family: "Roboto", sans-serif;
     background-color: #b3ff01be;
 }
 
+
+
 @media (min-width:1281px){
     .mundurowa{
         width: 80%;
@@ -206,6 +208,27 @@ header{
    background-size: cover;
    transition: background-image 1s ease-in-out;
 }
+.submenu-list {
+    display: none; /* Domyślnie ukryj podlistę */
+    position: absolute; /* Opcjonalnie, aby podlista była wcięta */
+}
+.submenu-list>li>a{
+    font-size: 20px;
+    color: #F6F5F2;
+    text-decoration: none;
+}
+.submenu-list>li>a:hover{
+    color: #00eeff;
+}
+.menu-list li:hover > .submenu-list {
+    display: block; /* Pokaż podlistę na hover */
+}
+.menu>ul>li{
+    display: inline-block;
+}
+.menu>ul>li{
+    display: inline-block;
+}
 .menu{
     position: absolute;
     right: 60px;
@@ -216,14 +239,22 @@ header{
     text-decoration: none;
     color: #EEEEEE;
 }
-.menu>ul>a{
+.menu>ul>li>a{
     color: #ececec;
     font-size: 20px;
     text-decoration: none;
     margin: 10px;
 }
-.menu>ul>a:hover{
+.menu>ul>li>a:hover{
     color: #8bd64e;
+}
+.menu>ul>li>h3{
+    font-size: 18px;
+    color: #FFF7FC;
+    padding: 2px 5px;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0 10px;
 }
 .hamburger{
     display: none;
@@ -977,6 +1008,9 @@ footer>div>p:hover{
        background-size: cover;
        transition: background-image 1s ease-in-out;
     }
+    .menu>ul>li{
+        display: inline-block;
+    }
     .menu{
         position: absolute;
         right: 60px;
@@ -987,14 +1021,22 @@ footer>div>p:hover{
         text-decoration: none;
         color: #EEEEEE;
     }
-    .menu>ul>a{
+    .menu>ul>li>a{
         color: #ececec;
         font-size: 15px;
         text-decoration: none;
         margin: 10px;
     }
-    .menu>ul>a:hover{
+    .menu>ul>li>a:hover{
         color: #8bd64e;
+    }
+    .menu>ul>li>h3{
+        font-size: 18px;
+        color: #FFF7FC;
+        padding: 2px 5px;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 0 10px;
     }
     .hamburger{
         display: none;

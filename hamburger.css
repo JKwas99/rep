@@ -27,7 +27,8 @@
         margin: 0 10px;
         position: absolute;
         top: 30px;
-        right: 20px;
+        transform: translateX(20px) translateY(25px);
+        right: 0px;
     }
     .hamburger-box{
         width: 40px;

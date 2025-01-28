@@ -207,21 +207,51 @@
     .menu{
         position: absolute;
         right: 60px;
-        top: 20px;
+        top: 00px;
     }
     .menu>ul{
         list-style-type: none;
         text-decoration: none;
         color: #EEEEEE;
     }
-    .menu>ul>a{
+    .menu>ul>li>a{
         color: #ececec;
-        font-size: 15px;
+        font-size: 20px;
         text-decoration: none;
-        margin: 10px;
+        margin: 20px 0px;
+        display: block;
     }
-    .menu>ul>a:hover{
+    .menu>ul>li>a:hover{
         color: #8bd64e;
+    }
+    .menu-list>li>h3{
+        width: 100%;
+        text-align: center;
+        color: #F6F5F2;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        font-weight: normal;
+        padding: 0px 0px;
+        margin: 0;  
+    }
+    .submenu-list {
+        display: none; /* Domyślnie ukryj podlistę */
+        position: absolute; /* Opcjonalnie, aby podlista była wcięta */
+        text-align: left;
+    }
+    .submenu-list>li>a{
+        text-align: left;
+        font-size: 18px;
+        color: #F6F5F2;
+        text-decoration: none;
+        color: #8bd64e;
+    }
+    .submenu-list>li>a:hover{
+        color: #8bd64e;
+    }
+    .menuActiveIs{
+        display: block;
     }
     .hamburger{
         display: none;
