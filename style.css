@@ -223,7 +223,9 @@ header{
 }
 .submenu-list {
     display: none; /* Domyślnie ukryj podlistę */
-    position: absolute; /* Opcjonalnie, aby podlista była wcięta */
+    position: absolute;
+    background-color: #00000071;
+    z-index: 22;
 }
 .submenu-list>li>a{
     font-size: 20px;
