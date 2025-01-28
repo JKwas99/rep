@@ -1,4 +1,20 @@
 @media (min-width:0px) and (max-width:799px){
+    #zdalne{
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #b3ff01;
+        font-size: 15px;
+        background-color: #00000085;
+        padding: 10px 20px;
+    }
+    #zdalne>img{
+        width: 20px;
+    }
     .icon-angle-double-up{
         font-size: 30px;
         position: fixed;
@@ -177,7 +193,7 @@
     }
     #poznaj{
         position:absolute;
-        bottom: 3%;
+        bottom: 8%;
         margin: 30px 30px 30px 30px;
         display: inline-block;
         text-decoration: none;
