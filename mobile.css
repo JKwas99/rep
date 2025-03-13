@@ -1,4 +1,8 @@
 @media (min-width:0px) and (max-width:799px){
+    .matura{
+        color: #b3ff01!important;
+    }
+
     #zdalne{
         display: block;
         position: absolute;
@@ -249,7 +253,7 @@
         display: block;
         font-weight: normal;
         padding: 0px 0px;
-        margin: 0;  
+        margin: 20px 0px;  
     }
     .submenu-list {
         display: none; /* Domyślnie ukryj podlistę */
@@ -263,11 +267,15 @@
         text-decoration: none;
         color: #8bd64e;
     }
+    .submenu-list>li{
+        display: block!important;
+    }
     .submenu-list>li>a:hover{
         color: #8bd64e;
     }
     .menuActiveIs{
         display: block;
+        padding-bottom: 20px;
     }
     .hamburger{
         display: none;

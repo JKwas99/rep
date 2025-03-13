@@ -83,27 +83,95 @@ function sprawdzScroll() {
 }
 
 let doks = document.getElementsByClassName("doks")
+let reks = document.getElementsByClassName("reks")
 let moveLI = document.getElementsByClassName("moveLI")
 let newMen = document.getElementsByClassName("submenu-list")
+let hg = newMen[0].offsetHeight; 
 
 let pin = 0
+let pin2 = 0
 
-doks[0].addEventListener('click', ()=>{
-    if(pin == 0){
-        moveLI[0].style.transform = `translateY(180px)`;
-        moveLI[1].style.transform = `translateY(180px)`;
-        moveLI[2].style.transform = `translateY(180px)`;
-        pin = 1
-    }
-    else{
-        moveLI[0].style.transform = `translateY(0px)`;
-        moveLI[1].style.transform = `translateY(0px)`;
-        moveLI[2].style.transform = `translateY(0px)`;
-        pin = 0
-    }
-    newMen[0].classList.toggle("menuActiveIs")
+if (doks.length > 0 && newMen.length > 1) {
+    doks[0].addEventListener("click", () => {
+        let submenu = newMen[1];
 
-})
+        // **Tymczasowo pokaż element, aby pobrać wysokość**
+        submenu.style.display = "block";
+        let submenuHeight = submenu.scrollHeight; 
+        submenu.style.display = ""; // Przywróć poprzedni stan
+
+        if (pin == 0) {
+            moveElements(submenuHeight);
+            submenu.classList.add("menuActiveIs");
+            pin = 1;
+        } else {
+            moveElements(0);
+            submenu.classList.remove("menuActiveIs");
+            pin = 0;
+        }
+    });
+}
+
+if (reks.length > 0 && newMen.length > 0) {
+    reks[0].addEventListener("click", () => {
+        let submenu = newMen[0];
+
+        submenu.style.display = "block";
+        let submenuHeight = submenu.scrollHeight;
+        submenu.style.display = "";
+
+        if (pin2 == 0) {
+            moveElements(submenuHeight+20, true);
+            submenu.classList.add("menuActiveIs");
+            pin2 = 1;
+        } else {
+            moveElements(0, true);
+            submenu.classList.remove("menuActiveIs");
+            pin2 = 0;
+        }
+    });
+}
+
+function moveElements(height, isReks = false) {
+    for (let i = isReks ? 0 : 1; i < moveLI.length; i++) {
+        moveLI[i].style.transform = `translateY(${height}px)`;
+    }
+}
+
+// doks[0].addEventListener('click', ()=>{
+//     if(pin == 0){
+//         moveLI[1].style.transform = `translateY(300px)`;
+//         moveLI[2].style.transform = `translateY(300px)`;
+//         moveLI[3].style.transform = `translateY(300px)`;
+//         pin = 1
+//     }
+//     else{
+//         moveLI[1].style.transform = `translateY(0px)`;
+//         moveLI[2].style.transform = `translateY(0px)`;
+//         moveLI[3].style.transform = `translateY(0px)`;
+//         pin = 0
+//     }
+//     newMen[1].classList.toggle("menuActiveIs")
+
+// })
+
+// reks[0].addEventListener('click', ()=>{
+//     if(pin2 == 0){
+//         moveLI[0].style.transform = `translateY(100px)`;
+//         moveLI[1].style.transform = `translateY(100px)`;
+//         moveLI[2].style.transform = `translateY(100px)`;
+//         moveLI[3].style.transform = `translateY(100px)`;
+//         pin2 = 1
+//     }
+//     else{
+//         moveLI[0].style.transform = `translateY(0px)`;
+//         moveLI[1].style.transform = `translateY(0px)`;
+//         moveLI[2].style.transform = `translateY(0px)`;
+//         moveLI[3].style.transform = `translateY(0px)`;
+//         pin2 = 0
+//     }
+//     newMen[0].classList.toggle("menuActiveIs")
+// })
 
 // Nasłuchiwanie zdarzenia scrolla
 window.addEventListener('scroll', sprawdzScroll);

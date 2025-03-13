@@ -5,6 +5,12 @@ font-family: "Roboto", sans-serif;
     color: #EEEEEE;
     color: #b3ff01;
 */
+.matura{
+    color: #b3ff01!important;
+}
+.matura:hover{
+    color: #00eeff!important;
+}
 .fade-out {
     opacity: 0; /* Zanikanie zdjęcia */
   }
@@ -146,7 +152,9 @@ font-family: "Roboto", sans-serif;
 ::-webkit-scrollbar-thumb:hover {
     background: #b3ff01;
 }
-
+.matura{
+    color: #b3ff01;;
+}
 body{
     background-color: #0C0C0C;
     padding: 0px 0px;
